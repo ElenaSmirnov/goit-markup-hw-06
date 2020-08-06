@@ -544,7 +544,9 @@
           Оставьте свои данные, мы вам перезвоним
         </h2>
         <button data-modal-close type="button" class="modal-close-btn">
-          X
+          <svg class="modal-close-icon" width="18px" height="18px">
+            <use href="./images/sprite.svg#icon-close-modal"></use>
+          </svg>
         </button>
         <div class="modal-form-input-wrapper">
           <input
@@ -556,6 +558,9 @@
             required
           />
           <label class="modal-form-label" for="user-modal-name">Имя</label>
+          <svg class="modal-icon" width="18px" height="18px">
+            <use href="./images/sprite.svg#icon-person-modal"></use>
+          </svg>
         </div>
 
         <div class="modal-form-input-wrapper">
@@ -568,6 +573,9 @@
             required
           />
           <label for="user-modal-tel" class="modal-form-label">Телефон</label>
+          <svg class="modal-icon" width="18px" height="18px">
+            <use href="./images/sprite.svg#icon-phone-modal"></use>
+          </svg>
         </div>
         <div class="modal-form-input-wrapper">
           <input
@@ -578,7 +586,11 @@
             placeholder=" "
             required
           />
+
           <label for="user-modal-mail" class="modal-form-label">Почта</label>
+          <svg class="modal-icon" width="18px" height="18px">
+            <use href="./images/sprite.svg#icon-email-modal"></use>
+          </svg>
         </div>
         <textarea
           name="user-message"
