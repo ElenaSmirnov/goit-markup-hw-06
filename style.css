@@ -258,7 +258,7 @@ p {
   margin-bottom: 50px;
 }
 
-.section-hero .button {
+.section-hero .modal-button {
   display: inline-block;
   border-radius: 4px;
   min-width: 136px;
@@ -270,18 +270,21 @@ p {
   color: var(--primary-white-color);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: unset;
+  border: none;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  transform: scale(1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-hero .button:hover,
 .section-hero .button:focus {
   background-color: var(--secondary-accent-color);
+  border: none;
+  transform: scale(1.1);
 }
 
 .overlay {
@@ -669,6 +672,8 @@ p {
 
 .footer-section .container {
   display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer-section {
@@ -710,9 +715,13 @@ p {
 }
 
 .footer-content {
-  align-items: baseline;
-  justify-content: space-between;
-  margin-right: 69px;
+  flex-basis: 25%;
+  margin-right: 30px;
+}
+
+.subscribe {
+  flex-basis: 25%;
+  margin-right: 30px;
 }
 
 .subscribe-list {
@@ -729,7 +738,7 @@ p {
 }
 
 .button-follow-us {
-  display: inline-block;
+  display: flex;
   border-radius: 4px;
   min-width: 200px;
   padding-top: 10px;
@@ -760,14 +769,10 @@ p {
 }
 
 .follow-us {
-  display: flex;
-}
-
-.modal-label {
+  flex-basis: 50%;
 }
 
 .form-input {
-  position: relative;
   width: 358px;
   height: 50px;
   background-color: transparent;
@@ -776,9 +781,12 @@ p {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   margin-right: 12px;
+
+  padding: 15px 16px;
 }
 
 .form-title {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 0.88;
@@ -786,7 +794,25 @@ p {
   text-transform: uppercase;
 
   color: var(--primary-white-color);
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+
+  color: var(--primary-white-color);
+}
+
+.form-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 /* MODAL WINDOW */
 .backdrop {
@@ -797,6 +823,8 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
+  transition: opacity 250ms var(--transition-timing-function),
+    visibility 250ms var(--transition-timing-function);
 }
 
 .modal-form {
@@ -813,6 +841,17 @@ p {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+  transition: transform 250ms var(--transition-timing-function);
+}
+
+.is-hidden .modal-form {
+  transform: translate(-50%, 50%);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal-form-title {
@@ -833,17 +872,58 @@ p {
 }
 
 .modal-form-input {
+  display: block;
   height: 40px;
-  padding-left: 46px;
+
   padding-top: 16px;
   padding-bottom: 12px;
+  padding-right: 16px;
+  padding-left: 42px;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+  box-shadow: 0 0 0 1000px var(--primary-white-color) inset;
+
+  color: var(--accent-color);
+}
+
+.modal-form-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 0.87;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(94, 53, 53, 0.2);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-left: 16px;
+
+  resize: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .modal-icon {
   position: absolute;
-  margin-bottom: 12px;
-  margin-top: 12px;
-  margin-left: 16px;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  fill: var(--title-text-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input::placeholder {
@@ -851,41 +931,35 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-.modal-form-input:focus::placeholder {
-  color: #000;
-}
-
-.modal-form-message {
-  height: 120px;
-  margin-bottom: 20px;
-  resize: none;
-}
-
-.modal-form-input,
-.modal-form-message {
-  display: block;
-  width: 100%;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 0.87;
-  letter-spacing: 0.1em;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding-top: 12px;
-  padding-left: 16px;
-}
-
 .modal-form-message:focus::placeholder {
   color: var(--accent-color);
 }
 
+.modal-form-message:focus + .modal-message-label {
+  font-size: 12px;
+  line-height: 1.17;
+
+  transform: translate(-26px, -40px);
+
+  color: var(--accent-color);
+}
+
+.modal-form-input:focus + .modal-form-label,
+.modal-form-input:not(:placeholder-shown) + .modal-form-label {
+  font-size: 12px;
+  line-height: 1.17;
+  transform: translate(-30px, -45px);
+  color: var(--accent-color);
+}
+
 .modal-form-input:focus,
-.modal-form-message:focus,
-.modal-form-input:not(:placeholder-shown),
-.modal-form-message:not(:placeholder-shown) {
+.modal-form-message:focus {
   outline: none;
   border-color: var(--accent-color);
+}
+
+.modal-form-input:focus ~ .modal-icon {
+  fill: var(--accent-color);
 }
 
 .modal-form-label {
@@ -893,17 +967,29 @@ p {
   top: 50%;
   left: 46px;
   transform: translateY(-50%);
-  font-weight: 600;
-  font-size: 11px;
+
+  font-size: 14px;
+  line-height: 0.88;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    font-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    line-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input:focus + .modal-form-label,
-.modal-form-input:not(:placeholder-shown) + .modal-form-label {
-  transform: translate(-30px, -45px);
-  color: var(--accent-color);
+.modal-message-label {
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 0.87;
+  letter-spacing: 0.1em;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    font-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    line-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-checkbox {
@@ -1027,5 +1113,6 @@ p {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   color: var(--accent-color);
-  background: #ffffff;
+  background: var(--primary-white-color);
+  outline: none;
 }
