@@ -1069,7 +1069,9 @@ p {
 
 .modal-form-btn {
   display: inline-block;
+  position: relative;
 
+  transform: translateX(50%);
   border-radius: 4px;
   border: unset;
   width: 200px;
