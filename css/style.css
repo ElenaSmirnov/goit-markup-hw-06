@@ -23,10 +23,10 @@ html {
   padding: 0;
 }
 body {
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
   font-family: Roboto, sans-serif;
   font-size: 14px;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 button {
@@ -100,7 +100,7 @@ p {
   padding-top: 93px;
 }
 
-/*Header*/
+/*Header*/ /*
 .header {
   line-height: normal;
 }
@@ -141,7 +141,7 @@ p {
   text-decoration: none;
 }
 .logo-web {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 .logo-studio {
   color: var(--logo-color);
@@ -168,7 +168,7 @@ p {
   height: 4px;
   content: "";
 
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   border-radius: 2px;
   margin-top: 28px;
 }
@@ -183,25 +183,25 @@ p {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--title-text-color);
+  color: $title-text-color;
   list-style: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav-list-item-link:hover,
 .site-nav-list-item-link:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .site-nav-list .active-list-item {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 .contacts-list .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -215,9 +215,9 @@ p {
 .contacts-list-icon:focus,
 .mail-smartphone-icon:hover,
 .mail-smartphone-icon:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 }
-
+*/
 /*Hero*/
 .section-hero {
   text-align: center;
@@ -241,7 +241,7 @@ p {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   margin-bottom: 30px;
   padding-top: 200px;
 }
@@ -266,7 +266,7 @@ p {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: $title-text-color;
   margin-bottom: 50px;
 }
 
@@ -280,8 +280,8 @@ p {
   padding-bottom: 10px;
   padding-left: 32px;
 
-  color: var(--primary-white-color);
-  background: var(--accent-color);
+  color: $primary-white-color;
+  background: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   cursor: pointer;
@@ -310,7 +310,7 @@ p {
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url(./images/Header-img.jpg);
+    url(../images/Header-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -341,7 +341,7 @@ p {
   cursor: pointer;
 
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: $title-text-color;
   background-color: var(--secondary-white-color);
   border: unset;
   border: none;
@@ -352,8 +352,8 @@ p {
 
 .filter-groups .button:hover,
 .filter-groups .button:focus {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  color: $primary-white-color;
+  background-color: $accent-color;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
   border-color: transparent;
@@ -361,7 +361,7 @@ p {
 }
 
 .filter-groups .button:active {
-  background: var(--accent-color);
+  background: $accent-color;
   border: none;
   border-radius: 4px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -390,8 +390,8 @@ p {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  color: $primary-white-color;
+  background-color: $accent-color;
   margin: 0;
   padding-left: 24px;
   padding-right: 24px;
@@ -425,7 +425,7 @@ p {
 
 .card-content {
   display: block;
-  background: var(--primary-white-color);
+  background: $primary-white-color;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
@@ -452,7 +452,7 @@ p {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--title-text-color);
+  color: $title-text-color;
 }
 
 .projects-kind {
@@ -460,7 +460,7 @@ p {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 /*Наши особенности*/
@@ -471,13 +471,13 @@ p {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--title-text-color);
+  color: $title-text-color;
 }
 .features-list .content {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 .features-list {
   display: flex;
@@ -527,7 +527,7 @@ p {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   background-color: var(--secondary-background-color);
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 /*.activitties-list-item {
   margin-right: 30px;
@@ -567,7 +567,7 @@ p {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: $title-text-color;
 }
 
 .team-list .member .specialty {
@@ -575,7 +575,7 @@ p {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .specialty {
@@ -583,7 +583,7 @@ p {
   margin-bottom: 16px;
 }
 .team-list-item {
-  background: var(--primary-white-color);
+  background: $primary-white-color;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
@@ -622,8 +622,8 @@ p {
 .social-list-item:focus,
 .social-list-item-link:hover,
 .social-list-item-link:focus {
-  fill: var(--primary-white-color);
-  background-color: var(--accent-color);
+  fill: $primary-white-color;
+  background-color: $accent-color;
 }
 .social-list-item:nth-child(4n) {
   margin-right: 0;
@@ -642,10 +642,10 @@ p {
 
 .subscribe-list .social-list-item:hover,
 .subscribe-list .social-list-item:focus {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 .subscribe-list .social-list-item .social-list-item-link {
-  fill: var(--primary-white-color);
+  fill: $primary-white-color;
 }
 
 .clients {
@@ -680,11 +680,11 @@ p {
 
 .clients-link:hover,
 .clients-link:focus {
-  border: solid var(--accent-color) 1px;
+  border: solid $accent-color 1px;
 }
 .clients-link:hover .clients-item-icon,
 .clients-link:focus .clients-item-icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 .clients-item-icon {
   fill: #afb1b8;
@@ -704,7 +704,7 @@ p {
   padding-top: 60px;
 }
 .footer-section .logo-studio {
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .footer-section .logo {
@@ -725,7 +725,7 @@ p {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   text-decoration: none;
 }
 .footer-contacts .link {
@@ -757,7 +757,7 @@ p {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   margin-bottom: 20px;
 }
 
@@ -776,8 +776,8 @@ p {
   padding-left: 28px;
 
   cursor: pointer;
-  color: var(--primary-white-color);
-  background: var(--accent-color);
+  color: $primary-white-color;
+  background: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   font-weight: 700;
@@ -793,7 +793,7 @@ p {
 }
 
 .button-follow-us-icon {
-  fill: var(--primary-white-color);
+  fill: $primary-white-color;
   margin-left: 10px;
   border: unset;
   border: none;
@@ -806,7 +806,7 @@ p {
 .form-input {
   width: 358px;
   height: 50px;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -825,7 +825,7 @@ p {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   margin-bottom: 20px;
 }
 
@@ -833,7 +833,7 @@ p {
   display: flex;
   align-items: center;
 
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .form-input::placeholder {
@@ -855,8 +855,8 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
-  transition: opacity 250ms var(--transition-timing-function),
-    visibility 250ms var(--transition-timing-function);
+  transition: opacity 250ms $transition-timing-function,
+    visibility 250ms $transition-timing-function;
 }
 
 .modal-form {
@@ -867,12 +867,12 @@ p {
 
   width: auto;
   flex-direction: column;
-  background: var(--primary-white-color);
+  background: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
-  transition: transform 250ms var(--transition-timing-function);
+  transition: transform 250ms $transition-timing-function;
 }
 
 .is-hidden .modal-form {
@@ -893,7 +893,7 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--title-text-color);
+  color: $title-text-color;
   margin-bottom: 30px;
 }
 
@@ -919,9 +919,9 @@ p {
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 
-  box-shadow: 0 0 0 1000px var(--primary-white-color) inset;
+  box-shadow: 0 0 0 1000px $primary-white-color inset;
 
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-form-field {
@@ -952,7 +952,7 @@ p {
   left: 16px;
   transform: translateY(-50%);
 
-  fill: var(--title-text-color);
+  fill: $title-text-color;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -963,10 +963,10 @@ p {
 }
 
 .modal-form-input {
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 .modal-form-message:focus::placeholder {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-form-message:focus + .modal-message-label {
@@ -975,7 +975,7 @@ p {
 
   transform: translate(-26px, -40px);
 
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-form-input:focus
@@ -985,17 +985,17 @@ p {
   font-size: 12px;
   line-height: 1.17;
   transform: translate(-30px, -45px);
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-form-input:focus,
 .modal-form-message:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: $accent-color;
 }
 
 .modal-form-input:focus ~ .modal-icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .modal-form-label {
@@ -1048,7 +1048,7 @@ p {
   line-height: 0.88;
   letter-spacing: 0.01em;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .modal-form-option-label-link {
@@ -1059,7 +1059,7 @@ p {
   letter-spacing: 0.03em;
   text-decoration-line: underline;
 
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-form-custom-checkbox {
@@ -1069,27 +1069,27 @@ p {
   justify-content: center;
   align-items: center;
   margin-right: 7px;
-  background-color: var(--primary-white-color);
-  color: var(--primary-white-color);
+  background-color: $primary-white-color;
+  color: $primary-white-color;
   border: solid #afb1b8 1px;
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-check-modal {
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 .modal-form-option-span {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .modal-form-checkbox:checked + .modal-form-custom-checkbox {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-  border: 0.2px solid var(--primary-white-color);
+  background-color: $accent-color;
+  color: $primary-white-color;
+  border: 0.2px solid $primary-white-color;
 }
 
 .modal-form-btn {
@@ -1108,8 +1108,8 @@ p {
   padding-left: 32px;
   margin: auto;
 
-  color: var(--primary-white-color);
-  background: var(--accent-color);
+  color: $primary-white-color;
+  background: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   font-weight: 700;
@@ -1139,7 +1139,7 @@ p {
   height: 32px;
   border: none;
   border-radius: 50%;
-  background: var(--primary-white-color);
+  background: $primary-white-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   cursor: pointer;
@@ -1147,12 +1147,12 @@ p {
 }
 
 .modal-close-icon:hover {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  color: var(--accent-color);
-  background: var(--primary-white-color);
+  color: $accent-color;
+  background: $primary-white-color;
   outline: none;
 }
