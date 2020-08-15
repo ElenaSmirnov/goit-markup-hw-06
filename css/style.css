@@ -22,8 +22,9 @@ html {
   margin: 0;
   padding: 0;
 }
+
 body {
-  background-color: $primary-white-color;
+  background-color: var(--primary-white-color);
   font-family: Roboto, sans-serif;
   font-size: 14px;
   color: $primary-text-color;
@@ -100,7 +101,7 @@ p {
   padding-top: 93px;
 }
 
-/*Header*/ /*
+/*Header*/
 .header {
   line-height: normal;
 }
@@ -144,7 +145,7 @@ p {
   color: $accent-color;
 }
 .logo-studio {
-  color: var(--logo-color);
+  color: $logo-color;
 }
 .site-nav-list {
   display: flex;
@@ -217,7 +218,7 @@ p {
 .mail-smartphone-icon:focus {
   color: $accent-color;
 }
-*/
+
 /*Hero*/
 .section-hero {
   text-align: center;
@@ -295,7 +296,7 @@ p {
 
 .section-hero .button:hover,
 .section-hero .button:focus {
-  background-color: var(--secondary-accent-color);
+  background-color: $secondary-accent-color;
   border: none;
   transform: scale(1.1);
 }
@@ -342,7 +343,7 @@ p {
 
   letter-spacing: 0.03em;
   color: $title-text-color;
-  background-color: var(--secondary-white-color);
+  background-color: $secondary-white-color;
   border: unset;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -492,7 +493,7 @@ p {
   display: flex;
   width: 100%;
   height: 120px;
-  background-color: var(--secondary-white-color);
+  background-color: $secondary-white-color;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -526,7 +527,7 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  background-color: var(--secondary-background-color);
+  background-color: $secondary-background-color;
   color: $primary-white-color;
 }
 /*.activitties-list-item {
@@ -553,7 +554,7 @@ p {
 
 .team {
   padding-top: 94px;
-  background-color: var(--secondary-white-color);
+  background-color: $secondary-white-color;
 }
 
 .team-list-item-image {
@@ -699,7 +700,7 @@ p {
 }
 
 .footer-section {
-  background-color: var(--footer-background);
+  background-color: $footer-background;
   padding-bottom: 60px;
   padding-top: 60px;
 }
@@ -733,7 +734,7 @@ p {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
 }
 
 .footer-content {
@@ -1121,7 +1122,7 @@ p {
 
 .modal-form-btn:hover,
 .modal-form-btn:focus {
-  background: var(--secondary-accent-color);
+  background: $secondary-accent-color;
 }
 
 .is-hidden {

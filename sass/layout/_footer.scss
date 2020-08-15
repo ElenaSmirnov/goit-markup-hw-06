@@ -5,7 +5,7 @@
 }
 
 .footer-section {
-  background-color: var(--footer-background);
+  background-color: $footer-background;
   padding-bottom: 60px;
   padding-top: 60px;
 }
@@ -39,7 +39,7 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
 }
 
 .footer-content {

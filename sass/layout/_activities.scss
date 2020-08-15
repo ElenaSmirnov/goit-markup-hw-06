@@ -10,7 +10,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  background-color: var(--secondary-background-color);
+  background-color: $secondary-background-color;
   color: $primary-white-color;
 }
 /*.activitties-list-item {

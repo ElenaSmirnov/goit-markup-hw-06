@@ -74,7 +74,7 @@
 
 .section-hero .button:hover,
 .section-hero .button:focus {
-  background-color: var(--secondary-accent-color);
+  background-color: $secondary-accent-color;
   border: none;
   transform: scale(1.1);
 }
