@@ -530,9 +530,9 @@ p {
   background-color: $secondary-background-color;
   color: $primary-white-color;
 }
-/*.activitties-list-item {
+.activities-list-item {
   margin-right: 30px;
-}*/
+}
 
 .activities-list-title {
   position: absolute;

@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="./css/normalise.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- Шапка сайта -->
@@ -310,7 +311,7 @@
     <footer class="footer-section">
       <div class="container">
         <div class="footer-content">
-          <a class="logo" lang="en" href="">
+          <a class="logo" lang="en" href="./index.html">
             <span class="logo-web">Web</span>
             <span class="logo-studio"> Studio</span>
           </a>
@@ -329,6 +330,7 @@
             >
           </address>
         </div>
+
         <div class="subscribe">
           <h3 class="subscribe-title">присоединяйтесь</h3>
           <ul class="social list subscribe-list">
@@ -377,14 +379,26 @@
               </a>
             </li>
           </ul>
-          <div class="follow-us">
+        </div>
+        <div class="follow-us">
+          <b class="form-title"> подпишитесь на рассылку</b>
+          <form class="footer-form">
+            <input
+              type="email"
+              name="email"
+              id="user-email"
+              class="form-input"
+              placeholder="E-mail"
+              required
+            />
+
             <button class="button button-follow-us">
               Подписаться
               <svg class="button-follow-us-icon" width="24" height="24">
                 <use href="./images/sprite.svg#icon-airplain"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
